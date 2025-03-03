@@ -1,0 +1,194 @@
+[
+	{
+		"source": "Base Game",
+		"image_url": "https://spiritislandwiki.com/images/thumb/c/c2/Lightning%27s_Swift_Strike.png/132px-Lightning%27s_Swift_Strike.png",
+		"spirit": "Lightning's Swift Strike",
+		"complexity": "LOW"
+	},
+	{
+		"source": "Base Game",
+		"image_url": "https://spiritislandwiki.com/images/thumb/f/ff/River_Surges_in_Sunlight.png/132px-River_Surges_in_Sunlight.png",
+		"spirit": "River Surges in Sunlight",
+		"complexity": "LOW"
+	},
+	{
+		"source": "Base Game",
+		"image_url": "https://spiritislandwiki.com/images/thumb/d/d2/Shadows_Flicker_Like_Flame.png/132px-Shadows_Flicker_Like_Flame.png",
+		"spirit": "Shadows Flicker Like Flame",
+		"complexity": "LOW"
+	},
+	{
+		"source": "Base Game",
+		"image_url": "https://spiritislandwiki.com/images/thumb/c/c2/Vital_Strength_of_the_Earth.png/132px-Vital_Strength_of_the_Earth.png",
+		"spirit": "Vital Strength of the Earth",
+		"complexity": "LOW"
+	},
+	{
+		"source": "Base Game",
+		"image_url": "https://spiritislandwiki.com/images/thumb/7/7f/A_Spread_of_Rampant_Green.png/132px-A_Spread_of_Rampant_Green.png",
+		"spirit": "A Spread of Rampant Green",
+		"complexity": "MODERATE"
+	},
+	{
+		"source": "Base Game",
+		"image_url": "https://spiritislandwiki.com/images/thumb/b/bd/Thunderspeaker.png/128px-Thunderspeaker.png",
+		"spirit": "Thunderspeaker",
+		"complexity": "MODERATE"
+	},
+	{
+		"source": "Base Game",
+		"image_url": "https://spiritislandwiki.com/images/thumb/a/aa/Bringer_of_Dreams_and_Nightmares.png/110px-Bringer_of_Dreams_and_Nightmares.png",
+		"spirit": "Bringer of Dreams and Nightmares",
+		"complexity": "HIGH"
+	},
+	{
+		"source": "Base Game",
+		"image_url": "https://spiritislandwiki.com/images/thumb/d/d8/Ocean%27s_Hungry_Grasp.png/131px-Ocean%27s_Hungry_Grasp.png",
+		"spirit": "Ocean's Hungry Grasp",
+		"complexity": "HIGH"
+	},
+	{
+		"source": "Branch And Claw",
+		"image_url": "https://spiritislandwiki.com/images/thumb/a/ae/Keeper_of_the_Forbidden_Wilds.png/132px-Keeper_of_the_Forbidden_Wilds.png",
+		"spirit": "Keeper of the Forbidden Wilds",
+		"complexity": "MODERATE"
+	},
+	{
+		"source": "Branch And Claw",
+		"image_url": "https://spiritislandwiki.com/images/thumb/a/a5/Sharp_Fangs_Behind_the_Leaves.png/132px-Sharp_Fangs_Behind_the_Leaves.png",
+		"spirit": "Sharp Fangs Behind the Leaves",
+		"complexity": "MODERATE"
+	},
+	{
+		"source": "Feather and Flame",
+		"image_url": "https://spiritislandwiki.com/images/thumb/2/21/Heart_of_the_Wildfire.png/132px-Heart_of_the_Wildfire.png",
+		"spirit": "Heart of the Wildfire",
+		"complexity": "HIGH"
+	},
+	{
+		"source": "Feather and Flame",
+		"image_url": "https://spiritislandwiki.com/images/thumb/1/1a/Serpent_Slumbering_Beneath_the_Island.png/132px-Serpent_Slumbering_Beneath_the_Island.png",
+		"spirit": "Serpent Slumbering Beneath the Island",
+		"complexity": "HIGH"
+	},
+	{
+		"source": "Jagged Earth",
+		"image_url": "https://spiritislandwiki.com/images/thumb/f/f0/Grinning_Trickster_Stirs_Up_Trouble.png/132px-Grinning_Trickster_Stirs_Up_Trouble.png",
+		"spirit": "Grinning Trickster Stirs Up Trouble",
+		"complexity": "MODERATE"
+	},
+	{
+		"source": "Jagged Earth",
+		"image_url": "https://spiritislandwiki.com/images/thumb/2/25/Lure_of_the_Deep_Wilderness.png/132px-Lure_of_the_Deep_Wilderness.png",
+		"spirit": "Lure of the Deep Wilderness",
+		"complexity": "MODERATE"
+	},
+	{
+		"source": "Jagged Earth",
+		"image_url": "https://spiritislandwiki.com/images/thumb/a/a3/Many_Minds_Move_as_One.png/132px-Many_Minds_Move_as_One.png",
+		"spirit": "Many Minds Move as One",
+		"complexity": "MODERATE"
+	},
+	{
+		"source": "Jagged Earth",
+		"image_url": "https://spiritislandwiki.com/images/thumb/0/0f/Shifting_Memory_of_Ages.png/132px-Shifting_Memory_of_Ages.png",
+		"spirit": "Shifting Memory of Ages",
+		"complexity": "MODERATE"
+	},
+	{
+		"source": "Jagged Earth",
+		"image_url": "https://spiritislandwiki.com/images/thumb/b/bf/Stone%27s_Unyielding_Defiance.png/132px-Stone%27s_Unyielding_Defiance.png",
+		"spirit": "Stone's Unyielding Defiance",
+		"complexity": "MODERATE"
+	},
+	{
+		"source": "Jagged Earth",
+		"image_url": "https://spiritislandwiki.com/images/thumb/3/33/Volcano_Looming_High.png/132px-Volcano_Looming_High.png",
+		"spirit": "Volcano Looming High",
+		"complexity": "MODERATE"
+	},
+	{
+		"source": "Jagged Earth",
+		"image_url": "https://spiritislandwiki.com/images/thumb/4/4e/Shroud_of_Silent_Mist.png/132px-Shroud_of_Silent_Mist.png",
+		"spirit": "Shroud of Silent Mist",
+		"complexity": "HIGH"
+	},
+	{
+		"source": "Jagged Earth",
+		"image_url": "https://spiritislandwiki.com/images/thumb/f/f2/Vengeance_as_a_Burning_Plague.png/132px-Vengeance_as_a_Burning_Plague.png",
+		"spirit": "Vengeance as a Burning Plague",
+		"complexity": "HIGH"
+	},
+	{
+		"source": "Jagged Earth",
+		"image_url": "https://spiritislandwiki.com/images/thumb/8/81/Fractured_Days_Split_the_Sky.png/132px-Fractured_Days_Split_the_Sky.png",
+		"spirit": "Fractured Days Split the Sky",
+		"complexity": "VERY HIGH"
+	},
+	{
+		"source": "Jagged Earth",
+		"image_url": "https://spiritislandwiki.com/images/thumb/6/6b/Starlight_Seeks_Its_Form.png/132px-Starlight_Seeks_Its_Form.png",
+		"spirit": "Starlight Seeks Its Form",
+		"complexity": "VERY HIGH"
+	},
+	{
+		"source": "Feather and Flame",
+		"image_url": "https://spiritislandwiki.com/images/thumb/7/74/Downpour_Drenches_the_World.png/132px-Downpour_Drenches_the_World.png",
+		"spirit": "Downpour Drenches the World",
+		"complexity": "HIGH"
+	},
+	{
+		"source": "Feather and Flame",
+		"image_url": "https://spiritislandwiki.com/images/thumb/d/d9/Finder_of_Paths_Unseen.png/132px-Finder_of_Paths_Unseen.png",
+		"spirit": "Finder of Paths Unseen",
+		"complexity": "VERY HIGH"
+	},
+	{
+		"source": "Nature Incarnate",
+		"image_url": "https://spiritislandwiki.com/images/thumb/4/4e/Ember-Eyed_Behemoth.png/132px-Ember-Eyed_Behemoth.png",
+		"spirit": "Ember-Eyed Behemoth",
+		"complexity": "MODERATE"
+	},
+	{
+		"source": "Nature Incarnate",
+		"image_url": "https://spiritislandwiki.com/images/thumb/c/c0/Hearth-Vigil.png/132px-Hearth-Vigil.png",
+		"spirit": "Hearth-Vigil",
+		"complexity": "MODERATE"
+	},
+	{
+		"source": "Nature Incarnate",
+		"image_url": "https://spiritislandwiki.com/images/thumb/7/74/Towering_Roots_of_the_Jungle.png/132px-Towering_Roots_of_the_Jungle.png",
+		"spirit": "Towering Roots of the Jungle",
+		"complexity": "MODERATE"
+	},
+	{
+		"source": "Nature Incarnate",
+		"image_url": "https://spiritislandwiki.com/images/thumb/0/03/Breath_of_Darkness_Down_Your_Spine.png/132px-Breath_of_Darkness_Down_Your_Spine.png",
+		"spirit": "Breath of Darkness Down Your Spine",
+		"complexity": "HIGH"
+	},
+	{
+		"source": "Nature Incarnate",
+		"image_url": "https://spiritislandwiki.com/images/thumb/0/04/Relentless_Gaze_of_the_Sun.png/132px-Relentless_Gaze_of_the_Sun.png",
+		"spirit": "Relentless Gaze of the Sun",
+		"complexity": "HIGH"
+	},
+	{
+		"source": "Nature Incarnate",
+		"image_url": "https://spiritislandwiki.com/images/thumb/a/a4/Wandering_Voice_Keens_Delirium.png/127px-Wandering_Voice_Keens_Delirium.png",
+		"spirit": "Wandering Voice Keens Delirium",
+		"complexity": "HIGH"
+	},
+	{
+		"source": "Nature Incarnate",
+		"image_url": "https://spiritislandwiki.com/images/thumb/2/24/Wounded_Waters_Bleeding.png/132px-Wounded_Waters_Bleeding.png",
+		"spirit": "Wounded Waters Bleeding",
+		"complexity": "HIGH"
+	},
+	{
+		"source": "Nature Incarnate",
+		"image_url": "https://spiritislandwiki.com/images/thumb/4/4c/Dances_Up_Earthquakes.png/132px-Dances_Up_Earthquakes.png",
+		"spirit": "Dances Up Earthquakes",
+		"complexity": "VERY HIGH"
+	}
+]

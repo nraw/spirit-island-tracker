@@ -1,0 +1,190 @@
+{
+	"aspects": [
+		{
+			"spirit": "Lightning's Swift Strike",
+			"aspect_name": "Pandemonium",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Lightning's_Swift_Strike_(Pandemonium).png",
+			"source": "Jagged Earth"
+		},
+		{
+			"spirit": "Lightning's Swift Strike",
+			"aspect_name": "Wind",
+			"image_url": "https://spiritislandwiki.com/images/4/4d/Lightning's_Swift_Strike_(Wind).png",
+			"source": "Jagged Earth"
+		},
+		{
+			"spirit": "River Surges in Sunlight",
+			"aspect_name": "Sunshine",
+			"image_url": "https://spiritislandwiki.com/images/7/7d/River_Surges_in_Sunlight_(Sunshine).png",
+			"source": "Jagged Earth"
+		},
+		{
+			"spirit": "Shadows Flicker Like Flame",
+			"aspect_name": "Madness",
+			"image_url": "https://spiritislandwiki.com/images/9/9a/Shadows_Flicker_Like_Flame_(Madness).png",
+			"source": "Jagged Earth"
+		},
+		{
+			"spirit": "Shadows Flicker Like Flame",
+			"aspect_name": "Reach",
+			"image_url": "https://spiritislandwiki.com/images/9/9a/Shadows_Flicker_Like_Flame_(Reach).png",
+			"source": "Jagged Earth"
+		},
+		{
+			"spirit": "Vital Strength of the Earth",
+			"aspect_name": "Resilience",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Vital_Strength_of_the_Earth_(Resilience).png",
+			"source": "Jagged Earth"
+		},
+		{
+			"spirit": "Lightning's Swift Strike",
+			"aspect_name": "Immense",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Lightning's_Swift_Strike_(Immense).png",
+			"source": "Promo Pack 2"
+		},
+		{
+			"spirit": "River Surges in Sunlight",
+			"aspect_name": "Travel",
+			"image_url": "https://spiritislandwiki.com/images/7/7d/River_Surges_in_Sunlight_(Travel).png",
+			"source": "Promo Pack 2"
+		},
+		{
+			"spirit": "Shadows Flicker Like Flame",
+			"aspect_name": "Amorphous",
+			"image_url": "https://spiritislandwiki.com/images/9/9a/Shadows_Flicker_Like_Flame_(Amorphous).png",
+			"source": "Promo Pack 2"
+		},
+		{
+			"spirit": "Shadows Flicker Like Flame",
+			"aspect_name": "Foreboding",
+			"image_url": "https://spiritislandwiki.com/images/9/9a/Shadows_Flicker_Like_Flame_(Foreboding).png",
+			"source": "Promo Pack 2"
+		},
+		{
+			"spirit": "Vital Strength of the Earth",
+			"aspect_name": "Might",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Vital_Strength_of_the_Earth_(Might).png",
+			"source": "Promo Pack 2"
+		},
+		{
+			"spirit": "A Spread of Rampant Green",
+			"aspect_name": "Regrowth",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/A_Spread_of_Rampant_Green_(Regrowth).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "A Spread of Rampant Green",
+			"aspect_name": "Tangles",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/A_Spread_of_Rampant_Green_(Tangles).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Bringer of Dreams and Nightmares",
+			"aspect_name": "Enticing",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Bringer_of_Dreams_and_Nightmares_(Enticing).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Bringer of Dreams and Nightmares",
+			"aspect_name": "Violence",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Bringer_of_Dreams_and_Nightmares_(Violence).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Heart of the Wildfire",
+			"aspect_name": "Transforming",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Heart_of_the_Wildfire_(Transforming).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Keeper of the Forbidden Wilds",
+			"aspect_name": "Spreading Hostility",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Keeper_of_the_Forbidden_Wilds_(Spreading_Hostility).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Lightning's Swift Strike",
+			"aspect_name": "Sparking",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Lightning's_Swift_Strike_(Sparking).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Lure of the Deep Wilderness",
+			"aspect_name": "Lair",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Lure_of_the_Deep_Wilderness_(Lair).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Ocean's Hungry Grasp",
+			"aspect_name": "Deeps",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Ocean's_Hungry_Grasp_(Deeps).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "River Surges in Sunlight",
+			"aspect_name": "Haven",
+			"image_url": "https://spiritislandwiki.com/images/7/7d/River_Surges_in_Sunlight_(Haven).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Serpent Slumbering Beneath the Island",
+			"aspect_name": "Locus",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Serpent_Slumbering_Beneath_the_Island_(Locus).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Shadows Flicker Like Flame",
+			"aspect_name": "Dark Fire",
+			"image_url": "https://spiritislandwiki.com/images/9/9a/Shadows_Flicker_Like_Flame_(Dark_Fire).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Sharp Fangs Behind the Leaves",
+			"aspect_name": "Encircle",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Sharp_Fangs_Behind_the_Leaves_(Encircle).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Sharp Fangs Behind the Leaves",
+			"aspect_name": "Unconstrained",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Sharp_Fangs_Behind_the_Leaves_(Unconstrained).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Shifting Memory of Ages",
+			"aspect_name": "Intensify",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Shifting_Memory_of_Ages_(Intensify).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Shifting Memory of Ages",
+			"aspect_name": "Mentor",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Shifting_Memory_of_Ages_(Mentor).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Shroud of Silent Mist",
+			"aspect_name": "Stranded",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Shroud_of_Silent_Mist_(Stranded).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Thunderspeaker",
+			"aspect_name": "Tactician",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Thunderspeaker_(Tactician).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Thunderspeaker",
+			"aspect_name": "Warrior",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Thunderspeaker_(Warrior).png",
+			"source": "Nature Incarnate"
+		},
+		{
+			"spirit": "Vital Strength of the Earth",
+			"aspect_name": "Nourishing",
+			"image_url": "https://spiritislandwiki.com/images/1/1a/Vital_Strength_of_the_Earth_(Nourishing).png",
+			"source": "Nature Incarnate"
+		}
+	]
+}

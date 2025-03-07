@@ -1,7 +1,7 @@
 import json
 import os
 import xml.etree.ElementTree as ET
-from typing import List, Optional
+from typing import DefaultDict, List, Optional
 
 import requests
 
@@ -9,19 +9,24 @@ import requests
 def main():
     with open("public/spirits.json") as f:
         spirits = json.load(f)
+    with open("public/adversaries.json") as f:
+        adversaries = json.load(f)
     plays_raw = get_logged_plays(game_ids=[162886])
-    plays = process_plays(plays_raw, spirits)
+    processed_plays = process_plays(plays_raw, spirits, adversaries)
+    with open("public/plays.json", "w") as f:
+        json.dump(processed_plays, f)
 
 
-def process_plays(plays_raw, spirits):
+def process_plays(plays_raw, spirits, adversaries):
     processed_plays = []
     for play in plays_raw:
         comment = play.get("comment")
         if not comment:
             continue
         comment_parts = comment.split("\n")
-        adversary_raw = comment_parts[0]
-        adversary, level = adversary_raw.split(" L")
+        adversary_full = comment_parts[0]
+        adversary_raw, level = adversary_full.split(" L")
+        adversary = find_adversary(adversaries, adversary_raw)
         map_raw = comment_parts[-1]
         players_raw = comment_parts[1:-1]
         players = []
@@ -41,17 +46,26 @@ def process_plays(plays_raw, spirits):
             "players": players,
         }
         processed_plays.append(play_data)
-    processed_plays = add_fake_play_data(processed_plays)
+    fake_play_data = get_fake_play_data(processed_plays, spirits)
+    processed_plays.extend(fake_play_data)
     return processed_plays
 
 
-def add_fake_play_data(plays, spirits):
+def get_fake_play_data(processed_plays, spirits):
     """Add all the spirits of the base game with the date 2024-04-01"""
+    spirits_already_played_by_players = DefaultDict(set)
+    for play in processed_plays:
+        if play["date"] <= "2025-03-01":
+            for player in play["players"]:
+                spirit = player["spirit"]
+                spirits_already_played_by_players[player["player"]].add(spirit)
     fake_play_data = []
     all_players_data = []
     base_game_spirits = [s for s in spirits if s["source"] == "Base Game"]
     for spirit in base_game_spirits:
         for player in ["A", "E"]:
+            if spirit["spirit"] in spirits_already_played_by_players[player]:
+                continue
             player_data = {"player": player, "spirit": spirit["spirit"]}
             all_players_data.append(player_data)
     fake_play = {
@@ -68,6 +82,8 @@ def add_fake_play_data(plays, spirits):
     selected_spirits = [s for s in spirits if s["source"] == "Jagged Earth"]
     for spirit in selected_spirits:
         for player in ["A", "E"]:
+            if spirit["spirit"] in spirits_already_played_by_players[player]:
+                continue
             player_data = {"player": player, "spirit": spirit["spirit"]}
             all_players_data.append(player_data)
     fake_play = {
@@ -79,7 +95,7 @@ def add_fake_play_data(plays, spirits):
         "players": all_players_data,
     }
     fake_play_data.append(fake_play)
-    return plays + fake_play_data
+    return fake_play_data
 
 
 def find_spirit(spirits, spirit_raw):
@@ -87,6 +103,14 @@ def find_spirit(spirits, spirit_raw):
         spirit_name = spirit["spirit"]
         if spirit_raw.lower() in spirit_name.lower():
             return spirit_name
+    return None
+
+
+def find_adversary(adversaries, adversary_raw):
+    for adversary in adversaries:
+        adversary_name = adversary["Adversary"]
+        if adversary_raw.lower() in adversary_name.lower():
+            return adversary_name
     return None
 
 

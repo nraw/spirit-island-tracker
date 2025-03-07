@@ -1,0 +1,354 @@
+[
+	{
+		"Adversary": "Brandenburg-Prussia",
+		"Base Difficulty": 1,
+		"Additional Loss Condition": "None",
+		"Escalation": "Land Rush: On each board with Town/City, add 1 Town to a land without Town.",
+		"Levels": [
+			{
+				"Level": 1,
+				"Difficulty": 2,
+				"Fear Cards": "9 (3/3/3)",
+				"Game Effects": "Fast Start: During Setup, on each board add 1 Town to land #3."
+			},
+			{
+				"Level": 2,
+				"Difficulty": 4,
+				"Fear Cards": "9 (3/3/3)",
+				"Game Effects": "Surge of Colonists: When making the Invader Deck, put 1 of the Stage III cards between Stage I and Stage II. (New Deck Order: 111-3-2222-3333)"
+			},
+			{
+				"Level": 3,
+				"Difficulty": 6,
+				"Fear Cards": "10 (3/4/3)",
+				"Game Effects": "Efficient: When making the Invader Deck, remove an additional Stage I card. (New Deck Order: 11-3-2222-3333)"
+			},
+			{
+				"Level": 4,
+				"Difficulty": 7,
+				"Fear Cards": "11 (4/4/3)",
+				"Game Effects": "Aggressive Timetable: When making the Invader Deck, remove an additional Stage II card. (New Deck Order: 11-3-222-3333)"
+			},
+			{
+				"Level": 5,
+				"Difficulty": 9,
+				"Fear Cards": "11 (4/4/3)",
+				"Game Effects": "Ruthlessly Efficient: When making the Invader Deck, remove an additional Stage I card. (New Deck Order: 1-3-222-3333)"
+			},
+			{
+				"Level": 6,
+				"Difficulty": 10,
+				"Fear Cards": "12 (4/4/4)",
+				"Game Effects": "Terrifyingly Efficient: When making the Invader Deck, remove all Stage I cards. (New Deck Order: 3-222-3333)"
+			}
+		]
+	},
+	{
+		"Adversary": "England",
+		"Base Difficulty": 1,
+		"Additional Loss Condition": "Proud & Mighty Capital: If 7 or more Town/City are ever in a single land, the Invaders win.",
+		"Escalation": "Building Boom: On each board with Town/City, Build in the land with the most Town/City.",
+		"Levels": [
+			{
+				"Level": 1,
+				"Difficulty": 3,
+				"Fear Cards": "10 (3/4/3)",
+				"Game Effects": "Indentured Servants Earn Land: Invader Build Cards affect matching lands without Invaders if they are adjacent to at least 2 Town/City."
+			},
+			{
+				"Level": 2,
+				"Difficulty": 4,
+				"Fear Cards": "11 (4/4/3)",
+				"Game Effects": "Criminals and Malcontents: During Setup, on each board add 1 Town to land #1 and 1 City to land #2."
+			},
+			{
+				"Level": 3,
+				"Difficulty": 6,
+				"Fear Cards": "13 (4/5/4)",
+				"Game Effects": "High Immigration (I): The Invaders take an extra Build action each Invader phase before Ravaging. Cards slide left from Ravage to it, and from it to the discard pile. Remove the tile when a Stage II card slides onto it."
+			},
+			{
+				"Level": 4,
+				"Difficulty": 7,
+				"Fear Cards": "14 (4/5/5)",
+				"Game Effects": "High Immigration (full): The extra Build tile remains out the entire game."
+			},
+			{
+				"Level": 5,
+				"Difficulty": 9,
+				"Fear Cards": "14 (4/5/5)",
+				"Game Effects": "Local Autonomy: Town/City have +1 Health."
+			},
+			{
+				"Level": 6,
+				"Difficulty": 11,
+				"Fear Cards": "13 (4/5/4)",
+				"Game Effects": "Independent Resolve: During Setup, add an additional Fear to the Fear Pool per player in the game. During any Invader Phase where you resolve no Fear Cards, perform the Build from High Immigration twice."
+			}
+		]
+	},
+	{
+		"Adversary": "Sweden",
+		"Base Difficulty": 1,
+		"Additional Loss Condition": "None",
+		"Escalation": "Swayed by the Invaders: After Invaders Explore into each land this Phase, if that land has at least as many Invaders as Dahan, replace 1 Dahan with 1 Town.",
+		"Levels": [
+			{
+				"Level": 1,
+				"Difficulty": 2,
+				"Fear Cards": "9 (3/3/3)",
+				"Game Effects": "Heavy Mining: If the Invaders do at least 6 Damage to the land during Ravage, add an extra Blight. The additional Blight does not destroy Presence or cause cascades."
+			},
+			{
+				"Level": 2,
+				"Difficulty": 3,
+				"Fear Cards": "10 (3/4/3)",
+				"Game Effects": "Population Pressure at Home: During Setup, on each board add 1 Town to land #4. On boards where land #4 starts with Town, put that Town in land #5 instead."
+			},
+			{
+				"Level": 3,
+				"Difficulty": 5,
+				"Fear Cards": "10 (3/4/3)",
+				"Game Effects": "Fine Steel for Tools and Guns: Towns deal 3 Damage. Cities deal 5 Damage."
+			},
+			{
+				"Level": 4,
+				"Difficulty": 6,
+				"Fear Cards": "11 (3/4/4)",
+				"Game Effects": "Royal Backing: During Setup, after adding all other Invaders, Accelerate the Invader Deck. On each board, add 1 Town to the land of that terrain with the fewest Invaders."
+			},
+			{
+				"Level": 5,
+				"Difficulty": 7,
+				"Fear Cards": "12 (4/4/4)",
+				"Game Effects": "Mining Rush: When Ravaging adds at least 1 Blight to a land, also add 1 Blight to an adjacent land without Blight/Dahan. Cascading Blight does not cause this effect."
+			},
+			{
+				"Level": 6,
+				"Difficulty": 8,
+				"Fear Cards": "13 (4/4/5)",
+				"Game Effects": "Prospecting Outpost: During setup, on each board add 1 Town and 1 Blight to land #8. The Blight comes from the box, not the Blight Card."
+			}
+		]
+	},
+	{
+		"Adversary": "France (Plantation Colony)",
+		"Base Difficulty": 2,
+		"Additional Loss Condition": "Sprawling Plantations: Before Setup, return all but 7 Blight per player to the box. Invaders win if you ever cannot place a Blight.",
+		"Escalation": "Demand for New Cash Crops: After Exploring, on each board, pick a land of the shown terrain. If it has Dahan/Blight, add 1 Dahan. Otherwise, add 1 Blight.",
+		"Levels": [
+			{
+				"Level": 1,
+				"Difficulty": 3,
+				"Fear Cards": "9 (3/3/3)",
+				"Game Effects": "Frontier Explorers: Except during Setup: After Invaders successfully Explore into a land which had no Dahan/Blight, add 1 Dahan there."
+			},
+			{
+				"Level": 2,
+				"Difficulty": 5,
+				"Fear Cards": "10 (3/4/3)",
+				"Game Effects": "Slave Labor: During Setup, put the 'Slave Rebellion' event under the top 3 cards of the Event Deck. After Invaders Build in a land with 2 Dahan or more, replace all but 1 Dahan there with an equal number of Town."
+			},
+			{
+				"Level": 3,
+				"Difficulty": 7,
+				"Fear Cards": "11 (4/4/3)",
+				"Game Effects": "Early Plantation: During Setup, on each board add 1 Dahan to the highest-numbered land without Dahan. Add 1 Dahan to land #1."
+			},
+			{
+				"Level": 4,
+				"Difficulty": 8,
+				"Fear Cards": "12 (4/4/4)",
+				"Game Effects": "Triangle Trade: Whenever Invaders Build a Coastal Town, add 1 Dahan to the adjacent land with the fewest Town."
+			},
+			{
+				"Level": 5,
+				"Difficulty": 9,
+				"Fear Cards": "13 (4/5/4)",
+				"Game Effects": "Slow-Healing Ecosystem: When you remove Blight from the board, put it here instead of onto the Blight Card. As soon as you have 3 Blight per player here, move it all back to the Blight Card."
+			},
+			{
+				"Level": 6,
+				"Difficulty": 10,
+				"Fear Cards": "14 (4/5/5)",
+				"Game Effects": "Persistent Explorers: After resolving an Explore Card, on each board add 1 Dahan to a land without any. Fear Card effects never remove Dahan. If one would, you may instead Push that Dahan."
+			}
+		]
+	},
+	{
+		"Adversary": "Habsburg Monarchy (Livestock Colony)",
+		"Base Difficulty": 2,
+		"Additional Loss Condition": "Irreparable Damage: Track how many Blight come off the Blight Card during Ravages that do 8+ Damage to the land. If that number ever exceeds players, the Invaders win.",
+		"Escalation": "Seek Prime Territory: After Exploring: On each board with 4 or fewer Town, add 1 Town to a land without Town/Dahan. On each board with 2 or fewer Town, do so again.",
+		"Levels": [
+			{
+				"Level": 1,
+				"Difficulty": 3,
+				"Fear Cards": "10 (3/4/3)",
+				"Game Effects": "Migratory Herders: After the normal Build Step: In each land matching a Build Card, Gather 1 Town from a land not matching a Build Card. (In board/land order.)"
+			},
+			{
+				"Level": 2,
+				"Difficulty": 5,
+				"Fear Cards": "11 (4/5/2)",
+				"Game Effects": "More Rural Than Urban: During Setup, on each board, add 1 Town to land #2 and 1 Town to the highest-numbered land without Setup symbols. During Play, when Invaders would Build 1 Town in an Inland land, they instead Build 2 Town."
+			},
+			{
+				"Level": 3,
+				"Difficulty": 6,
+				"Fear Cards": "12 (4/5/3)",
+				"Game Effects": "Fast Spread: When making the Invader Deck, Remove 1 additional Stage I Card. (New deck order: 11-2222-33333)"
+			},
+			{
+				"Level": 4,
+				"Difficulty": 8,
+				"Fear Cards": "12 (4/5/3)",
+				"Game Effects": "Herds Thrive in Verdant Lands: Town in lands without Blight are Durable: they have +2 Health, and 'Destroy Town' effects instead deal 2 Damage (to those Town only) per Invader they could Destroy. ('Destroy all Town' works normally.)"
+			},
+			{
+				"Level": 5,
+				"Difficulty": 9,
+				"Fear Cards": "13 (4/6/3)",
+				"Game Effects": "Wave of Immigration: Before the initial Explore, put the Habsburg Reminder Card under the top 5 Invader Cards. When Revealed, on each board, add 1 Town to a Coastal land without Town and 1 Town to the 3 Inland lands with the fewest Town."
+			},
+			{
+				"Level": 6,
+				"Difficulty": 10,
+				"Fear Cards": "14 (5/6/3)",
+				"Game Effects": "Far-Flung Herds: Ravages do +2 Damage (total) if any adjacent lands have Town. (This does not cause lands without Invaders to Ravage.)"
+			}
+		]
+	},
+	{
+		"Adversary": "Russia",
+		"Base Difficulty": 1,
+		"Additional Loss Condition": "Hunters Swarm the Island: If there are ever more Beast destroyed by Adversary rules on the panel than on the island, the Invaders win.",
+		"Escalation": "Stalk the Predators: On each board, add 2 Explore (total) among lands with Invader. If you can't, instead add 2 Explore among lands with Invader on a different board.",
+		"Levels": [
+			{
+				"Level": 1,
+				"Difficulty": 3,
+				"Fear Cards": "10 (3/3/4)",
+				"Game Effects": "Hunters Bring Home Shell and Hide: During Setup, on each board, add 1 Town and 1 Explorer to the highest-numbered land without Town/Dahan. During Play, Towns do +1 Damage. When Ravage adds Blight to a land (including cascades), Destroy 1 Town in that land."
+			},
+			{
+				"Level": 2,
+				"Difficulty": 4,
+				"Fear Cards": "11 (4/3/4)",
+				"Game Effects": "A Sense for Impending Disaster: The first time each Action would Destroy Dahan: If possible, 1 of those Dahan is instead Pushed; 1 Fear when you do so."
+			},
+			{
+				"Level": 3,
+				"Difficulty": 6,
+				"Fear Cards": "11 (4/4/3)",
+				"Game Effects": "Competition Among Hunters: Ravage Cards also match lands with 3 or more Explorers. (If the land already matched the Ravage Card, it still Ravages just once.)"
+			},
+			{
+				"Level": 4,
+				"Difficulty": 7,
+				"Fear Cards": "12 (4/4/4)",
+				"Game Effects": "Accelerated Exploitation: When making the Invader Deck, put 1 Stage III Card after each Stage II Card. (New Deck Order: 111-2-3-2-3-2-3-2-33)"
+			},
+			{
+				"Level": 5,
+				"Difficulty": 9,
+				"Fear Cards": "13 (4/5/4)",
+				"Game Effects": "Entrench in the Face of Fear: Put an unused Stage II Invader Card under the top 3 Fear Cards, and an unused Stage III Card under the top 7 Fear Cards. When one is revealed, immediately place it in the Build space (face-up)."
+			},
+			{
+				"Level": 6,
+				"Difficulty": 11,
+				"Fear Cards": "14 (5/5/4)",
+				"Game Effects": "Pressure for Fast Profit: After the Ravage Step of turn 2+, on each board where it added no Explorer: In the land with the most Explore (min. 1), add 1 City and 1 Town."
+			}
+		]
+	},
+	{
+		"Adversary": "Scotland",
+		"Base Difficulty": 1,
+		"Additional Loss Condition": "Trade Hub: If the number of Coastal lands with Town is ever greater than (2 x # of boards), the Invaders win.",
+		"Escalation": "Ports Sprawl Outward: On the single board with the most Coastal Town/City, add 1 Town to the N lands with the fewest Town (N = # of players).",
+		"Levels": [
+			{
+				"Level": 1,
+				"Difficulty": 3,
+				"Fear Cards": "10 (3/4/3)",
+				"Game Effects": "Trading Port: After Setup, in Coastal lands, Explore Cards add 1 City instead of 1 Explorer. 'Coastal Lands' Invader cards do this for maximum 2 lands per board."
+			},
+			{
+				"Level": 2,
+				"Difficulty": 4,
+				"Fear Cards": "11 (4/4/3)",
+				"Game Effects": "Seize Opportunity: During Setup, add 1 Town to land #2. Place 'Coastal Lands' as the 3rd Stage II card, and move the two Stage II Cards above it up by one. (New Deck Order: 11-22-1-C2-33333, where C is the Stage II Coastal Lands Card.)"
+			},
+			{
+				"Level": 3,
+				"Difficulty": 6,
+				"Fear Cards": "13 (4/5/4)",
+				"Game Effects": "Chart the Coastline: In Coastal lands, Build Cards affect lands without Invaders, so long as there is an adjacent Town."
+			},
+			{
+				"Level": 4,
+				"Difficulty": 7,
+				"Fear Cards": "14 (5/5/4)",
+				"Game Effects": "Ambition of a Minor Nation: During Setup, replace the bottom Stage I Card with the bottom Stage III Card. (New Deck Order: 11-22-3-C2-3333))"
+			},
+			{
+				"Level": 5,
+				"Difficulty": 8,
+				"Fear Cards": "15 (5/6/4)",
+				"Game Effects": "Runoff and Bilgewater: After a Ravage Action adds Blight to a Coastal Land, add 1 Blight to that board's Ocean (without cascading). Treat the Ocean as a Coastal Wetland for this rule and for Blight removal/movement."
+			},
+			{
+				"Level": 6,
+				"Difficulty": 10,
+				"Fear Cards": "16 (6/6/4)",
+				"Game Effects": "Exports Fuel Inward Growth: After the Ravage step, add 1 City to each Inland land that matches a Ravage card and is within Range 1 of City/Town."
+			}
+		]
+	},
+	{
+		"Adversary": "Habsburg Mining Expedition",
+		"Base Difficulty": 1,
+		"Additional Loss Condition": "Land Stripped Bare: At the end of the Invader Phase, the Invaders win if any land has at least 8 total Invaders/Dahan (combined).",
+		"Escalation": "Mining Tunnels: After Advancing Invader Cards: On each board, Explore in 2 lands whose terrains don't match a Ravage or Build Card (no source required).",
+		"Levels": [
+			{
+				"Level": 1,
+				"Difficulty": 3,
+				"Fear Cards": "9 (3/3/3)",
+				"Game Effects": "Avarice Rewarded: When Blight added by a Ravage Action would cascade, instead Upgrade 1 Town/City (before Dahan counterattack). Ceaseless Mining: Lands with 3 or more Invaders are Mining lands. In Mining lands: • Damage and modifiers to Damage affect Ravage Actions as though they were Build Actions. • During the Build Step, Build Cards cause Ravage Actions (instead of Build Actions)."
+			},
+			{
+				"Level": 2,
+				"Difficulty": 4,
+				"Fear Cards": "10 (3/3/4)",
+				"Game Effects": "Miners Come From Far and Wide: Setup: Add 1 Town in each land with no Town. Add 1 Town and 1 Explorer in the highest-numbered land with a Town Setup symbol."
+			},
+			{
+				"Level": 3,
+				"Difficulty": 5,
+				"Fear Cards": "11 (3/4/4)",
+				"Game Effects": "Mining Boom (I): After the Build Step, on each board: Choose a land with Invaders. Upgrade 1 Town there."
+			},
+			{
+				"Level": 4,
+				"Difficulty": 7,
+				"Fear Cards": "12 (4/4/4)",
+				"Game Effects": "Untapped Salt Deposits: Setup: Remove the Stage II 'Coastal Lands' card before randomly choosing Stage II cards. Place the 'Salt Deposits' card in place of the 2nd Stage II card. (New Deck Order: 111-2S22-33333, where S is the Salt Deposits card. Escalation ignores S.)"
+			},
+			{
+				"Level": 5,
+				"Difficulty": 9,
+				"Fear Cards": "13 (4/5/4)",
+				"Game Effects": "Mining Boom (II): Instead of Mining Boom (I), after the Build Step, on each board: Choose a land with Invaders. Build there, then Upgrade 1 Town. (Build normally in a Mining land.)"
+			},
+			{
+				"Level": 6,
+				"Difficulty": 10,
+				"Fear Cards": "13 (4/5/4)",
+				"Game Effects": "The Empire Ascendant: Setup and During the Explore Step: On boards with 3 or fewer Explorers: Add +1 Explorer in each land successfully explored. (Max. 2 lands per board per Explore Card.)"
+			}
+		]
+	}
+]

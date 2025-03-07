@@ -1,6 +1,7 @@
 [
 	{
 		"Adversary": "Brandenburg-Prussia",
+		"URL": "https://spiritislandwiki.com/index.php?title=Brandenburg-Prussia",
 		"Base Difficulty": 1,
 		"Additional Loss Condition": "None",
 		"Escalation": "Land Rush: On each board with Town/City, add 1 Town to a land without Town.",
@@ -45,6 +46,7 @@
 	},
 	{
 		"Adversary": "England",
+		"URL": "https://spiritislandwiki.com/index.php?title=England",
 		"Base Difficulty": 1,
 		"Additional Loss Condition": "Proud & Mighty Capital: If 7 or more Town/City are ever in a single land, the Invaders win.",
 		"Escalation": "Building Boom: On each board with Town/City, Build in the land with the most Town/City.",
@@ -89,6 +91,7 @@
 	},
 	{
 		"Adversary": "Sweden",
+		"URL": "https://spiritislandwiki.com/index.php?title=Sweden",
 		"Base Difficulty": 1,
 		"Additional Loss Condition": "None",
 		"Escalation": "Swayed by the Invaders: After Invaders Explore into each land this Phase, if that land has at least as many Invaders as Dahan, replace 1 Dahan with 1 Town.",
@@ -133,6 +136,7 @@
 	},
 	{
 		"Adversary": "France (Plantation Colony)",
+		"URL": "https://spiritislandwiki.com/index.php?title=France_(Plantation_Colony)",
 		"Base Difficulty": 2,
 		"Additional Loss Condition": "Sprawling Plantations: Before Setup, return all but 7 Blight per player to the box. Invaders win if you ever cannot place a Blight.",
 		"Escalation": "Demand for New Cash Crops: After Exploring, on each board, pick a land of the shown terrain. If it has Dahan/Blight, add 1 Dahan. Otherwise, add 1 Blight.",
@@ -177,6 +181,7 @@
 	},
 	{
 		"Adversary": "Habsburg Monarchy (Livestock Colony)",
+		"URL": "https://spiritislandwiki.com/index.php?title=Habsburg_Monarchy_(Livestock_Colony)",
 		"Base Difficulty": 2,
 		"Additional Loss Condition": "Irreparable Damage: Track how many Blight come off the Blight Card during Ravages that do 8+ Damage to the land. If that number ever exceeds players, the Invaders win.",
 		"Escalation": "Seek Prime Territory: After Exploring: On each board with 4 or fewer Town, add 1 Town to a land without Town/Dahan. On each board with 2 or fewer Town, do so again.",
@@ -221,6 +226,7 @@
 	},
 	{
 		"Adversary": "Russia",
+		"URL": "https://spiritislandwiki.com/index.php?title=Russia",
 		"Base Difficulty": 1,
 		"Additional Loss Condition": "Hunters Swarm the Island: If there are ever more Beast destroyed by Adversary rules on the panel than on the island, the Invaders win.",
 		"Escalation": "Stalk the Predators: On each board, add 2 Explore (total) among lands with Invader. If you can't, instead add 2 Explore among lands with Invader on a different board.",
@@ -265,6 +271,7 @@
 	},
 	{
 		"Adversary": "Scotland",
+		"URL": "https://spiritislandwiki.com/index.php?title=Scotland",
 		"Base Difficulty": 1,
 		"Additional Loss Condition": "Trade Hub: If the number of Coastal lands with Town is ever greater than (2 x # of boards), the Invaders win.",
 		"Escalation": "Ports Sprawl Outward: On the single board with the most Coastal Town/City, add 1 Town to the N lands with the fewest Town (N = # of players).",
@@ -309,6 +316,7 @@
 	},
 	{
 		"Adversary": "Habsburg Mining Expedition",
+		"URL": "https://spiritislandwiki.com/index.php?title=Habsburg_Mining_Expedition",
 		"Base Difficulty": 1,
 		"Additional Loss Condition": "Land Stripped Bare: At the end of the Invader Phase, the Invaders win if any land has at least 8 total Invaders/Dahan (combined).",
 		"Escalation": "Mining Tunnels: After Advancing Invader Cards: On each board, Explore in 2 lands whose terrains don't match a Ravage or Build Card (no source required).",

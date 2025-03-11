@@ -10,7 +10,7 @@ interface Play {
 	date: string;
 	players: Player[];
 	adversary?: string;
-	adversaryLevel?: number;
+	level?: number;
 }
 
 interface Spirit {
@@ -152,8 +152,7 @@ const SpiritIslandTracker = () => {
 		plays.forEach((play) => {
 			if (play.adversary && stats[play.adversary]) {
 				// Ensure level is treated as a number with default to 0
-				const level =
-					play.adversaryLevel !== undefined ? Number(play.adversaryLevel) : 0;
+				const level = play.level !== undefined ? Number(play.level) : 0;
 
 				if (stats[play.adversary][level]) {
 					stats[play.adversary][level].plays += 1;
@@ -392,9 +391,9 @@ const SpiritIslandTracker = () => {
 			</motion.h1>
 
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-				<div>
+				<div className="flex flex-col">
 					<h2 className="text-xl font-semibold mb-4">Spirit Recommendations</h2>
-					<div className="grid grid-cols-1 gap-4">
+					<div className="grid grid-cols-1 gap-4 flex-grow">
 						{uniquePlayers.map((player) => (
 							<motion.div
 								key={player}
@@ -443,12 +442,12 @@ const SpiritIslandTracker = () => {
 					</div>
 				</div>
 
-				<div>
+				<div className="flex flex-col">
 					<h2 className="text-xl font-semibold mb-4">
 						Adversary Recommendations
 					</h2>
 					<motion.div
-						className="border rounded-lg p-6 bg-gray-800 shadow-md"
+						className="border rounded-lg p-6 bg-gray-800 shadow-md flex-grow"
 						initial={{ opacity: 0, scale: 0.8 }}
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.5 }}

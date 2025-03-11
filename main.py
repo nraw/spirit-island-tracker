@@ -11,7 +11,9 @@ def main():
     with open("public/adversaries.json") as f:
         adversaries = json.load(f)
     plays_raw = get_logged_plays(game_ids=[162886])
+    print(plays_raw)
     processed_plays = process_plays(plays_raw, spirits, adversaries)
+    print(processed_plays)
     with open("public/plays.json", "w") as f:
         json.dump(processed_plays, f)
 

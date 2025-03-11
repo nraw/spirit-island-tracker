@@ -20,20 +20,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Use Node.js 22.x
-      uses: actions/setup-node@v4
-      with:
-        node-version: 22.x
-        cache: 'npm'
-
     - name: Run Python script
       run: python3 main.py
 
-    - run: npm ci
-    - run: CI=false npm run build --if-present
-
-    - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+    - name: Build and Deploy React app to GitHub Pages
+      uses: omkartapale/react-deployment-gh-pages@v1.0.0
+      env:
+        CI: false

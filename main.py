@@ -175,3 +175,7 @@ def get_logged_plays(
         page += 1
 
     return plays
+
+
+if __name__ == "__main__":
+    main()

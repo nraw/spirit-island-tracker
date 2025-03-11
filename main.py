@@ -25,8 +25,14 @@ def process_plays(plays_raw, spirits, adversaries):
             continue
         comment_parts = comment.split("\n")
         adversary_full = comment_parts[0]
-        adversary_raw, level = adversary_full.split(" L")
+        adversary_raw, level_raw = adversary_full.split(" L")
         adversary = find_adversary(adversaries, adversary_raw)
+        if " " in level_raw:
+            level, comment = level_raw.split(" ", 1)
+        else:
+            level = level_raw
+            comment = ""
+        level = int(level)
         map_raw = comment_parts[-1]
         players_raw = comment_parts[1:-1]
         players = []
@@ -44,6 +50,7 @@ def process_plays(plays_raw, spirits, adversaries):
             "level": level,
             "map": map_raw,
             "players": players,
+            "comment": comment,
         }
         processed_plays.append(play_data)
     fake_play_data = get_fake_play_data(processed_plays, spirits)

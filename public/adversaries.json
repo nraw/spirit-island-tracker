@@ -1,5 +1,50 @@
 [
 	{
+		"Adversary": "Russia",
+		"URL": "https://spiritislandwiki.com/index.php?title=Russia",
+		"Base Difficulty": 1,
+		"Additional Loss Condition": "Hunters Swarm the Island: If there are ever more Beast destroyed by Adversary rules on the panel than on the island, the Invaders win.",
+		"Escalation": "Stalk the Predators: On each board, add 2 Explore (total) among lands with Invader. If you can't, instead add 2 Explore among lands with Invader on a different board.",
+		"Levels": [
+			{
+				"Level": 1,
+				"Difficulty": 3,
+				"Fear Cards": "10 (3/3/4)",
+				"Game Effects": "Hunters Bring Home Shell and Hide: During Setup, on each board, add 1 Town and 1 Explorer to the highest-numbered land without Town/Dahan. During Play, Towns do +1 Damage. When Ravage adds Blight to a land (including cascades), Destroy 1 Town in that land."
+			},
+			{
+				"Level": 2,
+				"Difficulty": 4,
+				"Fear Cards": "11 (4/3/4)",
+				"Game Effects": "A Sense for Impending Disaster: The first time each Action would Destroy Dahan: If possible, 1 of those Dahan is instead Pushed; 1 Fear when you do so."
+			},
+			{
+				"Level": 3,
+				"Difficulty": 6,
+				"Fear Cards": "11 (4/4/3)",
+				"Game Effects": "Competition Among Hunters: Ravage Cards also match lands with 3 or more Explorers. (If the land already matched the Ravage Card, it still Ravages just once.)"
+			},
+			{
+				"Level": 4,
+				"Difficulty": 7,
+				"Fear Cards": "12 (4/4/4)",
+				"Game Effects": "Accelerated Exploitation: When making the Invader Deck, put 1 Stage III Card after each Stage II Card. (New Deck Order: 111-2-3-2-3-2-3-2-33)"
+			},
+			{
+				"Level": 5,
+				"Difficulty": 9,
+				"Fear Cards": "13 (4/5/4)",
+				"Game Effects": "Entrench in the Face of Fear: Put an unused Stage II Invader Card under the top 3 Fear Cards, and an unused Stage III Card under the top 7 Fear Cards. When one is revealed, immediately place it in the Build space (face-up)."
+			},
+			{
+				"Level": 6,
+				"Difficulty": 11,
+				"Fear Cards": "14 (5/5/4)",
+				"Game Effects": "Pressure for Fast Profit: After the Ravage Step of turn 2+, on each board where it added no Explorer: In the land with the most Explore (min. 1), add 1 City and 1 Town."
+			}
+		]
+	},
+	{
 		"Adversary": "Brandenburg-Prussia",
 		"URL": "https://spiritislandwiki.com/index.php?title=Brandenburg-Prussia",
 		"Base Difficulty": 1,
@@ -221,51 +266,6 @@
 				"Difficulty": 10,
 				"Fear Cards": "14 (5/6/3)",
 				"Game Effects": "Far-Flung Herds: Ravages do +2 Damage (total) if any adjacent lands have Town. (This does not cause lands without Invaders to Ravage.)"
-			}
-		]
-	},
-	{
-		"Adversary": "Russia",
-		"URL": "https://spiritislandwiki.com/index.php?title=Russia",
-		"Base Difficulty": 1,
-		"Additional Loss Condition": "Hunters Swarm the Island: If there are ever more Beast destroyed by Adversary rules on the panel than on the island, the Invaders win.",
-		"Escalation": "Stalk the Predators: On each board, add 2 Explore (total) among lands with Invader. If you can't, instead add 2 Explore among lands with Invader on a different board.",
-		"Levels": [
-			{
-				"Level": 1,
-				"Difficulty": 3,
-				"Fear Cards": "10 (3/3/4)",
-				"Game Effects": "Hunters Bring Home Shell and Hide: During Setup, on each board, add 1 Town and 1 Explorer to the highest-numbered land without Town/Dahan. During Play, Towns do +1 Damage. When Ravage adds Blight to a land (including cascades), Destroy 1 Town in that land."
-			},
-			{
-				"Level": 2,
-				"Difficulty": 4,
-				"Fear Cards": "11 (4/3/4)",
-				"Game Effects": "A Sense for Impending Disaster: The first time each Action would Destroy Dahan: If possible, 1 of those Dahan is instead Pushed; 1 Fear when you do so."
-			},
-			{
-				"Level": 3,
-				"Difficulty": 6,
-				"Fear Cards": "11 (4/4/3)",
-				"Game Effects": "Competition Among Hunters: Ravage Cards also match lands with 3 or more Explorers. (If the land already matched the Ravage Card, it still Ravages just once.)"
-			},
-			{
-				"Level": 4,
-				"Difficulty": 7,
-				"Fear Cards": "12 (4/4/4)",
-				"Game Effects": "Accelerated Exploitation: When making the Invader Deck, put 1 Stage III Card after each Stage II Card. (New Deck Order: 111-2-3-2-3-2-3-2-33)"
-			},
-			{
-				"Level": 5,
-				"Difficulty": 9,
-				"Fear Cards": "13 (4/5/4)",
-				"Game Effects": "Entrench in the Face of Fear: Put an unused Stage II Invader Card under the top 3 Fear Cards, and an unused Stage III Card under the top 7 Fear Cards. When one is revealed, immediately place it in the Build space (face-up)."
-			},
-			{
-				"Level": 6,
-				"Difficulty": 11,
-				"Fear Cards": "14 (5/5/4)",
-				"Game Effects": "Pressure for Fast Profit: After the Ravage Step of turn 2+, on each board where it added no Explorer: In the land with the most Explore (min. 1), add 1 City and 1 Town."
 			}
 		]
 	},

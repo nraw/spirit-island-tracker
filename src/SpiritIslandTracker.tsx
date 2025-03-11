@@ -549,9 +549,9 @@ const SpiritIslandTracker = () => {
 										<img
 											src={spirit.image_url}
 											alt={spirit.spirit}
-											className="mr-4 w-16 h-16 rounded-full object-cover object-center shadow-md"
+											className="mr-4 w-8 h-8 lg:w-16 lg:h-16 rounded-full object-cover object-center shadow-md"
 										/>
-										<span className="font-medium text-gray-200">
+										<span className="font-medium text-xs md:text-base text-gray-200 truncate max-w-xs">
 											{spirit.spirit}
 										</span>
 									</div>

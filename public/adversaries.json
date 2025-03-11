@@ -180,7 +180,7 @@
 		]
 	},
 	{
-		"Adversary": "France (Plantation Colony)",
+		"Adversary": "France",
 		"URL": "https://spiritislandwiki.com/index.php?title=France_(Plantation_Colony)",
 		"Base Difficulty": 2,
 		"Additional Loss Condition": "Sprawling Plantations: Before Setup, return all but 7 Blight per player to the box. Invaders win if you ever cannot place a Blight.",
@@ -225,7 +225,7 @@
 		]
 	},
 	{
-		"Adversary": "Habsburg Monarchy (Livestock Colony)",
+		"Adversary": "Habsburg Monarchy",
 		"URL": "https://spiritislandwiki.com/index.php?title=Habsburg_Monarchy_(Livestock_Colony)",
 		"Base Difficulty": 2,
 		"Additional Loss Condition": "Irreparable Damage: Track how many Blight come off the Blight Card during Ravages that do 8+ Damage to the land. If that number ever exceeds players, the Invaders win.",
@@ -315,7 +315,7 @@
 		]
 	},
 	{
-		"Adversary": "Habsburg Mining Expedition",
+		"Adversary": "Habsburg Mining",
 		"URL": "https://spiritislandwiki.com/index.php?title=Habsburg_Mining_Expedition",
 		"Base Difficulty": 1,
 		"Additional Loss Condition": "Land Stripped Bare: At the end of the Invader Phase, the Invaders win if any land has at least 8 total Invaders/Dahan (combined).",

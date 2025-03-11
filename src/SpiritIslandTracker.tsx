@@ -24,6 +24,7 @@ interface Adversary {
 	Adversary: string;
 	"Base Difficulty": number;
 	"Additional Loss Condition": string;
+	URL: string;
 	Escalation: string;
 	Levels: {
 		Level: number;
@@ -409,10 +410,10 @@ const SpiritIslandTracker = () => {
 											rec?.spirit ? (
 												<li
 													key={complexity}
-													className="flex items-center space-x-4"
+													className="grid grid-cols-[auto_1fr_auto] gap-4 text-left"
 												>
 													<div
-														className="mr-2 p-2 w-4 h-4 rounded-full"
+														className="mx-4 p-2 h-4 rounded-full flex items-center justify-center"
 														style={{
 															backgroundColor:
 																complexity === "LOW"
@@ -454,19 +455,26 @@ const SpiritIslandTracker = () => {
 					>
 						<ul className="space-y-4">
 							{adversaryRecommendations.map((rec) => (
-								<li key={rec.adversary} className="flex items-center space-x-4">
+								<li
+									key={rec.adversary}
+									className="grid grid-cols-[auto_1fr_auto] gap-4 text-left"
+								>
 									<div
 										className="mr-2 p-2 w-4 h-4 rounded-full"
 										style={{
 											backgroundColor: getDifficultyColor(rec.difficulty),
 										}}
 									></div>
-									<span className="font-medium text-gray-200">
+									<a
+										href={`#${rec.adversary}`}
+										className="font-medium text-gray-200"
+									>
 										{rec.adversary}{" "}
 										{rec.level > 0 ? `(Level ${rec.level})` : "(Base)"}
-									</span>
-									<span className="text-sm text-gray-400 ml-2">
-										Difficulty {rec.difficulty} - {rec.reason}
+									</a>
+									<span className="text-sm text-gray-400 ml-2 flex flex-col items-center justify-center">
+										<span>Difficulty {rec.difficulty}</span>
+										<span>{rec.reason}</span>
 									</span>
 								</li>
 							))}
@@ -592,13 +600,21 @@ const SpiritIslandTracker = () => {
 						{adversaries.map((adversary) => (
 							<motion.div
 								key={adversary.Adversary}
+								id={adversary.Adversary}
 								className="border rounded-lg p-6 bg-gray-800 shadow-md"
 								initial={{ opacity: 0, scale: 0.8 }}
 								animate={{ opacity: 1, scale: 1 }}
 								transition={{ duration: 0.5 }}
 							>
 								<h3 className="text-xl font-medium mb-3">
-									{adversary.Adversary}
+									<a
+										href={adversary.URL}
+										className="text-indigo-400"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										{adversary.Adversary}
+									</a>
 								</h3>
 								<div className="mb-4 text-sm text-gray-400">
 									<p>

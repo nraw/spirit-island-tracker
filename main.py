@@ -34,10 +34,22 @@ def process_plays(plays_raw, spirits, adversaries):
             level = level_raw
             comment = ""
         level = int(level)
-        map_raw = comment_parts[-1]
-        players_raw = comment_parts[1:-1]
+        # Check if last line indicates a loss
+        last_line = comment_parts[-1].lower()
+        won = not last_line.startswith("lost")
+        
+        # If the last line is "lost", then map is the second to last line
+        if not won:
+            map_raw = comment_parts[-2] if len(comment_parts) >= 2 else ""
+            players_raw = comment_parts[1:-2] if len(comment_parts) >= 3 else comment_parts[1:-1]
+        else:
+            map_raw = comment_parts[-1]
+            players_raw = comment_parts[1:-1]
+        
         players = []
         for player_raw in players_raw:
+            if ": " not in player_raw:
+                continue
             player, spirit_raw = player_raw.split(": ")
             spirit = find_spirit(spirits, spirit_raw)
             if spirit is None:
@@ -52,6 +64,7 @@ def process_plays(plays_raw, spirits, adversaries):
             "map": map_raw,
             "players": players,
             "comment": comment,
+            "won": won,
         }
         processed_plays.append(play_data)
     fake_play_data = get_fake_play_data(processed_plays, spirits)
@@ -83,6 +96,7 @@ def get_fake_play_data(processed_plays, spirits):
         "level": None,
         "map": None,
         "players": all_players_data,
+        "won": True,
     }
     fake_play_data.append(fake_play)
 
@@ -101,6 +115,7 @@ def get_fake_play_data(processed_plays, spirits):
         "level": None,
         "map": None,
         "players": all_players_data,
+        "won": True,
     }
     fake_play_data.append(fake_play)
     return fake_play_data

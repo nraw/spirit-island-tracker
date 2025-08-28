@@ -11,6 +11,7 @@ interface Play {
 	players: Player[];
 	adversary?: string;
 	level?: number;
+	won?: boolean;
 }
 
 interface Spirit {
@@ -46,6 +47,7 @@ interface PlayStats {
 
 interface AdversaryLevelStats {
 	plays: number;
+	wins: number;
 	lastPlayed: string | null;
 	difficulty: number;
 }
@@ -135,6 +137,7 @@ const SpiritIslandTracker = () => {
 			// Add level 0 (base adversary)
 			stats[adversary.Adversary][0] = {
 				plays: 0,
+				wins: 0,
 				lastPlayed: null,
 				difficulty: adversary["Base Difficulty"],
 			};
@@ -144,6 +147,7 @@ const SpiritIslandTracker = () => {
 				const levelNum = Number(level.Level);
 				stats[adversary.Adversary][levelNum] = {
 					plays: 0,
+					wins: 0,
 					lastPlayed: null,
 					difficulty: level.Difficulty,
 				};
@@ -157,6 +161,9 @@ const SpiritIslandTracker = () => {
 
 				if (stats[play.adversary][level]) {
 					stats[play.adversary][level].plays += 1;
+					if (play.won) {
+						stats[play.adversary][level].wins += 1;
+					}
 
 					const playDate = new Date(play.date);
 					const currentLastPlayed = stats[play.adversary][level].lastPlayed;
@@ -190,8 +197,8 @@ const SpiritIslandTracker = () => {
 
 		// Go through all adversaries and determine the next level to play
 		adversaries.forEach((adversary) => {
-			// Find the highest level played for this adversary
-			let highestLevelPlayed = -1;
+			// Find the highest level won for this adversary
+			let highestLevelWon = -1;
 			let mostRecentDate: string | null = null;
 
 			// Check all levels including base (0)
@@ -201,24 +208,24 @@ const SpiritIslandTracker = () => {
 
 				const levelStats = adversaryStats[adversary.Adversary][i];
 
-				// If this level has been played
-				if (levelStats.plays > 0) {
-					highestLevelPlayed = Math.max(highestLevelPlayed, i);
+				// If this level has been won (not just played)
+				if (levelStats.wins > 0) {
+					highestLevelWon = Math.max(highestLevelWon, i);
+				}
 
-					// Track the most recent play date across all levels
-					if (levelStats.lastPlayed) {
-						if (
-							!mostRecentDate ||
-							new Date(levelStats.lastPlayed) > new Date(mostRecentDate)
-						) {
-							mostRecentDate = levelStats.lastPlayed;
-						}
+				// Track the most recent play date across all levels
+				if (levelStats.lastPlayed) {
+					if (
+						!mostRecentDate ||
+						new Date(levelStats.lastPlayed) > new Date(mostRecentDate)
+					) {
+						mostRecentDate = levelStats.lastPlayed;
 					}
 				}
 			}
 
-			// Determine next level to play (highest + 1, capped at 6)
-			const nextLevel = Math.min(highestLevelPlayed + 1, 6);
+			// Determine next level to play (highest won + 1, capped at 6)
+			const nextLevel = Math.min(highestLevelWon + 1, 6);
 
 			// Determine the difficulty of this level
 			let difficulty: number;
@@ -629,6 +636,7 @@ const SpiritIslandTracker = () => {
 											<th className="border p-2 text-left">Level</th>
 											<th className="border p-2 text-left">Difficulty</th>
 											<th className="border p-2 text-left">Plays</th>
+											<th className="border p-2 text-left">Wins</th>
 											<th className="border p-2 text-left">Last Played</th>
 										</tr>
 									</thead>
@@ -654,6 +662,9 @@ const SpiritIslandTracker = () => {
 											</td>
 											<td className="border p-2">
 												{adversaryStats[adversary.Adversary][0]?.plays || 0}
+											</td>
+											<td className="border p-2">
+												{adversaryStats[adversary.Adversary][0]?.wins || 0}
 											</td>
 											<td className="border p-2 text-sm text-gray-400">
 												{formatDate(
@@ -687,6 +698,10 @@ const SpiritIslandTracker = () => {
 													<td className="border p-2">
 														{adversaryStats[adversary.Adversary][levelNum]
 															?.plays || 0}
+													</td>
+													<td className="border p-2">
+														{adversaryStats[adversary.Adversary][levelNum]
+															?.wins || 0}
 													</td>
 													<td className="border p-2 text-sm text-gray-400">
 														{formatDate(

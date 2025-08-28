@@ -60,6 +60,9 @@ const SpiritIslandTracker = () => {
 		key: string;
 		direction: "asc" | "desc";
 	} | null>(null);
+	const [selectedSpirits, setSelectedSpirits] = useState<Record<string, Spirit | null>>({});
+	const [randomSeed, setRandomSeed] = useState(0);
+	const [showAllPlayers, setShowAllPlayers] = useState(false);
 
 	useEffect(() => {
 		fetch("plays.json")
@@ -82,11 +85,13 @@ const SpiritIslandTracker = () => {
 			.catch((error) => console.error("Error fetching adversaries:", error));
 	}, []);
 
-	const uniquePlayers = Array.from(
+	const allUniquePlayers = Array.from(
 		new Set(plays.flatMap((play) => play.players.map((p) => p.player))),
-	)
-		.filter((player) => player === "A" || player === "E")
-		.sort();
+	).sort();
+
+	const uniquePlayers = showAllPlayers 
+		? allUniquePlayers 
+		: allUniquePlayers.filter((player) => player === "A" || player === "E");
 
 	const buildPlayStats = (): Record<string, PlayStats> => {
 		const stats: Record<string, PlayStats> = {};
@@ -270,8 +275,19 @@ const SpiritIslandTracker = () => {
 		return recommendations;
 	};
 
-	const getRecommendations = () => {
-		const recommendations: Record<
+	// Create a simple seeded random function for consistent recommendations
+	const seededRandom = (seed: string, max: number) => {
+		let hash = 0;
+		for (let i = 0; i < seed.length; i++) {
+			const char = seed.charCodeAt(i);
+			hash = ((hash << 5) - hash) + char;
+			hash = hash & hash; // Convert to 32-bit integer
+		}
+		return Math.abs(hash) % max;
+	};
+
+	const recommendations = React.useMemo(() => {
+		const recs: Record<
 			string,
 			Record<string, { spirit: Spirit; reason: string }>
 		> = {};
@@ -279,7 +295,7 @@ const SpiritIslandTracker = () => {
 		const complexityLevels = ["LOW", "MODERATE", "HIGH", "VERY HIGH"];
 
 		uniquePlayers.forEach((player) => {
-			recommendations[player] = {};
+			recs[player] = {};
 
 			complexityLevels.forEach((complexity) => {
 				const complexitySpirits = spirits.filter(
@@ -291,10 +307,10 @@ const SpiritIslandTracker = () => {
 				);
 
 				if (unplayedSpirits.length > 0) {
-					const randomIndex = Math.floor(
-						Math.random() * unplayedSpirits.length,
-					);
-					recommendations[player][complexity] = {
+					// Use seeded random based on player + complexity + randomSeed for consistency
+					const seed = `${player}-${complexity}-${randomSeed}-${unplayedSpirits.map(s => s.spirit).join('')}`;
+					const randomIndex = seededRandom(seed, unplayedSpirits.length);
+					recs[player][complexity] = {
 						spirit: unplayedSpirits[randomIndex],
 						reason: "Never played",
 					};
@@ -313,7 +329,7 @@ const SpiritIslandTracker = () => {
 					});
 
 					if (oldestPlayedSpirit) {
-						recommendations[player][complexity] = {
+						recs[player][complexity] = {
 							spirit: oldestPlayedSpirit,
 							reason: `Last played ${oldestDate.toLocaleDateString()}`,
 						};
@@ -322,10 +338,9 @@ const SpiritIslandTracker = () => {
 			});
 		});
 
-		return recommendations;
-	};
-
-	const recommendations = getRecommendations();
+		return recs;
+	}, [playStats, spirits, uniquePlayers, randomSeed]);
+	
 	const adversaryRecommendations = getAdversaryRecommendation();
 
 	const handleSort = (key: string) => {
@@ -387,6 +402,34 @@ const SpiritIslandTracker = () => {
 		return "#EF4444"; // Dark red for expert
 	};
 
+	const getComplexityColor = (complexity: string) => {
+		if (complexity === "LOW") return "#34D399";
+		if (complexity === "MODERATE") return "#FBBF24";
+		if (complexity === "HIGH") return "#F87171";
+		return "#EF4444"; // VERY HIGH
+	};
+
+	const handleSpiritSelection = (player: string, spirit: Spirit) => {
+		setSelectedSpirits(prev => ({
+			...prev,
+			[player]: prev[player]?.spirit === spirit.spirit ? null : spirit
+		}));
+	};
+
+	const generateLogText = () => {
+		const firstAdversary = adversaryRecommendations[0];
+		const selectedPlayerSpirits = uniquePlayers
+			.filter(player => selectedSpirits[player])
+			.map(player => `${player}: ${selectedSpirits[player]!.spirit}`);
+
+		if (!firstAdversary || selectedPlayerSpirits.length === 0) return "";
+
+		const adversaryLine = `${firstAdversary.adversary} L${firstAdversary.level}`;
+		const mapLine = "Map TBD";
+
+		return `${adversaryLine}\n${selectedPlayerSpirits.join("\n")}\n${mapLine}`;
+	};
+
 	return (
 		<div className="p-4 max-w-6xl mx-auto text-white">
 			<motion.h1
@@ -400,7 +443,17 @@ const SpiritIslandTracker = () => {
 
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
 				<div className="flex flex-col">
-					<h2 className="text-xl font-semibold mb-4">Spirit Recommendations</h2>
+					<div className="flex items-center justify-between mb-4">
+						<h2 className="text-xl font-semibold">Spirit Recommendations</h2>
+						<button
+							onClick={() => setRandomSeed(prev => prev + 1)}
+							className="text-sm text-gray-400 hover:text-indigo-400 transition-all duration-200 flex items-center gap-1 group px-2 py-1 rounded hover:bg-gray-800/50"
+							title="Randomize recommendations"
+						>
+							<span className="text-xs group-hover:rotate-180 transition-transform duration-300 inline-block">🎲</span>
+							<span className="font-medium">Shuffle</span>
+						</button>
+					</div>
 					<div className="grid grid-cols-1 gap-4 flex-grow">
 						{uniquePlayers.map((player) => (
 							<motion.div
@@ -420,17 +473,18 @@ const SpiritIslandTracker = () => {
 													className="grid grid-cols-[auto_1fr_auto] gap-4 text-left"
 												>
 													<div
-														className="mx-4 p-2 h-4 rounded-full flex items-center justify-center"
+														className={`mx-4 p-2 h-4 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-110 ${
+															selectedSpirits[player]?.spirit === rec.spirit.spirit 
+																? 'scale-[1.2]' 
+																: 'scale-100'
+														}`}
 														style={{
-															backgroundColor:
-																complexity === "LOW"
-																	? "#34D399"
-																	: complexity === "MODERATE"
-																		? "#FBBF24"
-																		: complexity === "HIGH"
-																			? "#F87171"
-																			: "#EF4444",
+															backgroundColor: getComplexityColor(complexity),
+															boxShadow: selectedSpirits[player]?.spirit === rec.spirit.spirit 
+																? `0 0 0 4px ${getComplexityColor(complexity)}66` 
+																: 'none'
 														}}
+														onClick={() => handleSpiritSelection(player, rec.spirit)}
 													></div>
 													<a
 														href={`#${rec.spirit.spirit}`}
@@ -489,6 +543,27 @@ const SpiritIslandTracker = () => {
 					</motion.div>
 				</div>
 			</div>
+
+			{uniquePlayers.some(player => selectedSpirits[player]) && uniquePlayers.filter(player => selectedSpirits[player]).length >= 2 && (
+				<motion.div
+					className="mb-8 flex justify-center"
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.3 }}
+				>
+					<button
+						onClick={() => {
+							const text = generateLogText();
+							navigator.clipboard.writeText(text).then(() => {
+								// Optional: Add visual feedback that text was copied
+							});
+						}}
+						className="bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 border-2 border-indigo-500 hover:border-indigo-400 uppercase tracking-wide"
+					>
+						📋 COPY TEXT
+					</button>
+				</motion.div>
+			)}
 
 			<div className="overflow-x-auto">
 				<h2 className="text-2xl font-bold mb-6 text-gray-300">
@@ -723,7 +798,21 @@ const SpiritIslandTracker = () => {
 			</div>
 
 			<div className="mt-8">
-				<h2 className="text-xl font-semibold mb-2">Summary</h2>
+				<div className="flex items-center justify-between mb-2">
+					<h2 className="text-xl font-semibold">Summary</h2>
+					<button
+						onClick={() => setShowAllPlayers(!showAllPlayers)}
+						className="text-sm text-gray-400 hover:text-indigo-400 transition-colors duration-200 flex items-center gap-1"
+						title={showAllPlayers ? "Show only A & E" : "Show all players"}
+					>
+						<span className="font-medium">
+							{showAllPlayers ? "Show Main Players" : "Show All Players"}
+						</span>
+						<span className="text-xs">
+							{showAllPlayers ? "👥" : "👀"}
+						</span>
+					</button>
+				</div>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 					{uniquePlayers.map((player) => {
 						const playerTotalPlays = Object.values(playStats).reduce(

@@ -14,6 +14,7 @@ on:
 
 jobs:
   deploy:
+    environment: github-pages
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +23,8 @@ jobs:
 
     - name: Run Python script
       run: python3 main.py
+      env:
+        BGG_API_KEY: ${{ secrets.BGG_API_KEY }}
 
     - name: Build and Deploy React app to GitHub Pages
       uses: omkartapale/react-deployment-gh-pages@v1.0.0

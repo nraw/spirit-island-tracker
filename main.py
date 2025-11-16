@@ -1,4 +1,5 @@
 import json
+import os
 import xml.etree.ElementTree as ET
 from typing import DefaultDict, List, Optional
 
@@ -37,15 +38,17 @@ def process_plays(plays_raw, spirits, adversaries):
         # Check if last line indicates a loss
         last_line = comment_parts[-1].lower()
         won = not last_line.startswith("lost")
-        
+
         # If the last line is "lost", then map is the second to last line
         if not won:
             map_raw = comment_parts[-2] if len(comment_parts) >= 2 else ""
-            players_raw = comment_parts[1:-2] if len(comment_parts) >= 3 else comment_parts[1:-1]
+            players_raw = (
+                comment_parts[1:-2] if len(comment_parts) >= 3 else comment_parts[1:-1]
+            )
         else:
             map_raw = comment_parts[-1]
             players_raw = comment_parts[1:-1]
-        
+
         players = []
         for player_raw in players_raw:
             if ": " not in player_raw:
@@ -146,12 +149,14 @@ def get_logged_plays(
     base_url = f"https://www.boardgamegeek.com/xmlapi2/plays?username={username}"
     plays = []
     page = 1
+    BGG_API_KEY = os.environ.get("BGG_API_KEY")
+    headers = {"Authorization": "Bearer " + BGG_API_KEY} if BGG_API_KEY else {}
 
     while True:
         url = f"{base_url}&page={page}"
         if since is not None:
             url += f"&mindate={since}"
-        response = requests.get(url)
+        response = requests.get(url, headers=headers)
         response.raise_for_status()
         root = ET.fromstring(response.content)
         all_plays = root.findall("play")

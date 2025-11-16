@@ -149,8 +149,8 @@ def get_logged_plays(
     base_url = f"https://www.boardgamegeek.com/xmlapi2/plays?username={username}"
     plays = []
     page = 1
-    BGG_API_KEY = os.environ.get("BGG_API_KEY")
-    headers = {"Authorization": "Bearer " + BGG_API_KEY} if BGG_API_KEY else {}
+    bgg_api_key = os.environ.get("BGG_API_KEY", "")
+    headers = {"Accept": "application/xml", "Authorization": f"Bearer {bgg_api_key}"}
 
     while True:
         url = f"{base_url}&page={page}"

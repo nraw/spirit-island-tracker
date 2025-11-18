@@ -146,7 +146,7 @@ def get_logged_plays(
     since: Optional[str] = None,
 ):
     username = "nraw"
-    base_url = f"https://www.boardgamegeek.com/xmlapi2/plays?username={username}"
+    base_url = f"https://boardgamegeek.com/xmlapi2/plays?username={username}"
     plays = []
     page = 1
     bgg_api_key = os.environ["BGG_API_KEY"]

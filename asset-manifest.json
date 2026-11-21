@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/spirit-island-tracker/static/css/main.e59b6232.css",
+    "main.js": "/spirit-island-tracker/static/js/main.688eb5bc.js",
+    "static/js/453.50d5b8d9.chunk.js": "/spirit-island-tracker/static/js/453.50d5b8d9.chunk.js",
+    "index.html": "/spirit-island-tracker/index.html",
+    "main.e59b6232.css.map": "/spirit-island-tracker/static/css/main.e59b6232.css.map",
+    "main.688eb5bc.js.map": "/spirit-island-tracker/static/js/main.688eb5bc.js.map",
+    "453.50d5b8d9.chunk.js.map": "/spirit-island-tracker/static/js/453.50d5b8d9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e59b6232.css",
+    "static/js/main.688eb5bc.js"
+  ]
+}
